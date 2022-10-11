@@ -41,5 +41,9 @@
     "electron": "^20.1.1",
     "electron-builder": "^23.3.3",
     "eslint": "^8.23.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnSiegel/ptg-launcher.git"
   }
 }
