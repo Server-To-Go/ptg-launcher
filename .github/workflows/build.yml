@@ -3,43 +3,12 @@ name: Build
 on: push
 
 jobs:
-  mac:
-    runs-on: macos-latest
-
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v1
-
-      - name: Set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-
-      - name: Install Dependencies
-        run: npm ci
-        shell: bash
-
-      - name: Build
-        env:
-          CSC_KEY_PASSWORD: ${{ secrets.MAC_OSX_CERT_PASSWORD }}
-          CSC_LINK: ${{ secrets.MAC_OSX_CERT }}
-          APPLEID: ${{ secrets.APPLEID }}
-          APPLEIDPASS: ${{ secrets.APPLEIDPASS }}
-          GH_TOKEN: ${{ secrets.github_token }}
-        run: npm run dist
-        shell: bash
-
   release:
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
 
     steps:
       - name: Check out Git repository
@@ -59,8 +28,17 @@ jobs:
         run: npm ci
         shell: bash
 
-      - name: Build
-        env:
+      - name: Prepare for app notarization
+        if: startsWith(matrix.os, 'macos')
+        run: |
+          mkdir -p ~/private_keys/
+          echo '${{ secrets.api_key }}' > ~/private_keys/AuthKey_${{ secrets.api_key_id }}.p8
+
+      - name: Build/release Electron app
+        uses: samuelmeuli/action-electron-builder@v1
+        with:
           GH_TOKEN: ${{ secrets.github_token }}
-        run: npm run dist
-        shell: bash
+          mac_certs: ${{ secrets.mac_osx_cert }}
+          mac_certs_password: ${{ secrets.mac_osx_cert_password }}
+          API_KEY_ID: ${{ secrets.api_key_id }}
+          API_KEY_ISSUER_ID: ${{ secrets.api_key_issuer_id }}
