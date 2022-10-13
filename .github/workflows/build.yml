@@ -30,6 +30,10 @@ jobs:
 
       - name: Build
         env:
+          CSC_KEY_PASSWORD: ${{ secrets.MAC_OSX_CERT_PASSWORD }}
+          CSC_LINK: ${{ secrets.MAC_OSX_CERT }}
+          APPLEID: ${{ secrets.APPLEID }}
+          APPLEIDPASS: ${{ secrets.APPLEIDPASS }}
           GH_TOKEN: ${{ secrets.github_token }}
         run: npm run dist
         shell: bash
