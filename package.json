@@ -45,15 +45,6 @@
     "electron-notarize": "^1.2.1",
     "eslint": "^8.23.0"
   },
-  "build:": {
-    "afterSign": "scripts/afterSignHook.js",
-    "mac": {
-      "hardenedRuntime": true,
-      "gatekeeperAssess": false,
-      "entitlementsInherit": "build/entitlements.mac.plist",
-      "entitlements": "build/entitlements.mac.plist"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JohnSiegel/ptg-launcher.git"
