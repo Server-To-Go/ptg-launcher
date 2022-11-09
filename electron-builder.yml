@@ -1,6 +1,6 @@
-appId: "pixelmontogolauncher"
+appId: "unsortedguylauncher"
 afterSign: "scripts/afterSignHook.js"
-productName: "Pixelmon-To-Go Launcher"
+productName: "unsorted guy Launcher"
 artifactName: "${productName}-setup-${version}.${ext}"
 
 copyright: "Copyright © 2018-2022 Daniel Scalzi"
