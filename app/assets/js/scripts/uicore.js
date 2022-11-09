@@ -70,7 +70,7 @@ if (!isDev) {
         if (process.platform === "darwin") {
           info.darwindownload = `https://github.com/Server-To-Go/ptg-launcher/releases/download/v${
             info.version
-          }/Pixelmon-To-Go-Launcher-setup-${info.version}${
+          }/unsorted-guy-Launcher-setup-${info.version}${
             process.arch === "arm64" ? "-arm64" : "-x64"
           }.dmg`;
           showUpdateUI(info);
