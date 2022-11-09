@@ -1,6 +1,6 @@
 {
   "name": "ptg-launcher",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "productName": "unsorted guy Launcher",
   "description": "Modded Minecraft Launcher",
   "author": "John Siegel",
@@ -47,6 +47,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ItsmeFawaz/unsorted-guy-repository.git"
+    "url": "git+https://github.com/Server-To-Go/ptg-launcher.git"
   }
 }
