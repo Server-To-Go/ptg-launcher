@@ -1,6 +1,6 @@
-appId: "unsortedguylauncher"
+appId: "waterishpuppylauncher"
 afterSign: "scripts/afterSignHook.js"
-productName: "unsorted guy Launcher"
+productName: "waterish puppy Launcher"
 artifactName: "${productName}-setup-${version}.${ext}"
 
 copyright: "Copyright © 2018-2022 Daniel Scalzi"
