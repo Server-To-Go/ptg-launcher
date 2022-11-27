@@ -1,6 +1,6 @@
-appId: "unsortedguylauncher"
+appId: "ershgemlauncher"
 afterSign: "scripts/afterSignHook.js"
-productName: "unsorted guy Launcher"
+productName: "Ersh Gem Launcher"
 artifactName: "${productName}-setup-${version}.${ext}"
 
 copyright: "Copyright © 2018-2022 Daniel Scalzi"

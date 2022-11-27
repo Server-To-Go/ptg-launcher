@@ -396,7 +396,7 @@ class ProcessBuilder {
 
     // Java Arguments
     if (process.platform === "darwin") {
-      args.push("-Xdock:name=unsortedguylauncher");
+      args.push("-Xdock:name=ershgemlauncher");
       args.push(
         "-Xdock:icon=" + path.join(__dirname, "..", "images", "minecraft.icns")
       );
@@ -435,7 +435,7 @@ class ProcessBuilder {
 
     // Java Arguments
     if (process.platform === "darwin") {
-      args.push("-Xdock:name=unsortedguyLauncher");
+      args.push("-Xdock:name=ershgemLauncher");
       args.push(
         "-Xdock:icon=" + path.join(__dirname, "..", "images", "minecraft.icns")
       );
@@ -540,7 +540,7 @@ class ProcessBuilder {
               val = args[i].replace(argDiscovery, tempNativePath);
               break;
             case "launcher_name":
-              val = args[i].replace(argDiscovery, "unsorted-guy-Launcher");
+              val = args[i].replace(argDiscovery, "ersh-gem-Launcher");
               break;
             case "launcher_version":
               val = args[i].replace(argDiscovery, this.launcherVersion);

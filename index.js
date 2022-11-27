@@ -16,7 +16,7 @@ const { AZURE_CLIENT_ID, MSFT_OPCODE, MSFT_REPLY_TYPE, MSFT_ERROR, SHELL_OPCODE 
 const AutoLaunch = require('auto-launch');
 
 let autoLaunch = new AutoLaunch({
-    name: 'unsorted guy Launcher',
+    name: 'Ersh Gem Launcher',
     path: app.getPath('exe'),
 });
 
