@@ -1,6 +1,6 @@
-appId: "ershgemlauncher"
+appId: "ddlauncher"
 afterSign: "scripts/afterSignHook.js"
-productName: "Ersh Gem Launcher"
+productName: "Dustin and Danny Launcher"
 artifactName: "${productName}-setup-${version}.${ext}"
 
 copyright: "Copyright © 2018-2022 Daniel Scalzi"

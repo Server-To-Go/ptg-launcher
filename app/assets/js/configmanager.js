@@ -13,7 +13,7 @@ const sysRoot =
     ? process.env.HOME + "/Library/Application Support"
     : process.env.HOME);
 // TODO change
-const dataPath = path.join(sysRoot, ".ershgemlauncher");
+const dataPath = path.join(sysRoot, ".ddlauncher");
 
 // Forked processes do not have access to electron, so we have this workaround.
 const launcherDir =

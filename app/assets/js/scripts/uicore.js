@@ -70,7 +70,7 @@ if (!isDev) {
         if (process.platform === "darwin") {
           info.darwindownload = `https://github.com/Server-To-Go/ptg-launcher/releases/download/v${
             info.version
-          }/Ersh-Gem-Launcher-setup-${info.version}${
+          }/Dustin-And-Danny-Launcher-setup-${info.version}${
             process.arch === "arm64" ? "-arm64" : "-x64"
           }.dmg`;
           showUpdateUI(info);
